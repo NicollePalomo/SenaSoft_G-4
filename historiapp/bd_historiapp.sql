@@ -58,5 +58,3 @@ CREATE TABLE consultar_historial (
   CONSTRAINT pk_colsultar_historial PRIMARY KEY (id_consultar_historial),
   CONSTRAINT fk_capturar_historial FOREIGN KEY (id_capturar_historial) REFERENCES capturar_historial (id_capturar_historial)
   ;)
-
-
