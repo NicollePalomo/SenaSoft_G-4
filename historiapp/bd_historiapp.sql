@@ -12,7 +12,7 @@ CREATE TABLE usuario1 (
   usuario VARCHAR(20) NOT NULL,
   contraseña BINARY(20) NOT NULL,
   CONSTRAINT pk_usuario1 PRIMARY KEY (id_usuario1)
-  ;)
+;)
 
 
 
@@ -26,7 +26,7 @@ CREATE TABLE usuario2 (
   usuario VARCHAR(20) NOT NULL,
   contraseña BINARY(20) NOT NULL,
   CONSTRAINT pk_usuario2 PRIMARY KEY (id_usuario2)
-  ;)
+);
 
 
 
@@ -36,7 +36,7 @@ CREATE TABLE capturar_historial (
   historial_clinico BLOB NOT NULL,
   CONSTRAINT pk_capturar_historial PRIMARY KEY (id_capturar_historial),
   CONSTRAINT fk_usuario2 FOREIGN KEY (id_usuario2) REFERENCES usuario2 (id_usuario2)
-  ;)
+);
 
 
 
@@ -57,4 +57,4 @@ CREATE TABLE consultar_historial (
   tratamiento LONGTEXT NOT NULL,
   CONSTRAINT pk_colsultar_historial PRIMARY KEY (id_consultar_historial),
   CONSTRAINT fk_capturar_historial FOREIGN KEY (id_capturar_historial) REFERENCES capturar_historial (id_capturar_historial)
-  ;)
+);
